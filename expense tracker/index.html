@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            margin-left: 20%;
+            margin-right: 20%;
+            /* background: darkblue; */
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            background: rgb(95, 150, 40);
+            width: fit-content;
+            margin-left: 42%;
+            color: white;
+        }
+        input{
+            width: 474px;
+        }
+        p{
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: 800;
+        }
+        #name input{
+            width: 90%;
+
+        }
+        #submit{
+            margin-left: 37%;
+            margin-right: 40%;
+            background: cyan;
+            width: 300px;
+            height: 30px;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .title{
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        th{
+            border: 1px gray solid;
+        }
+        .nameTable {
+            width: 400px;
+            background: rgba(128, 128, 128, 0.048);
+        }
+        .dateTable{
+            width: 285px;
+        }
+        .amountTable{
+            width: 285px;
+            background:  rgba(128, 128, 128, 0.048);
+        }
+        .removeTable{
+            width: 190px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+    <h1>Expense Tracker</h1>
+    <h2>Add a new Item:</h2>
+    <p id="name">Name:
+    <input type="text" name="names" id="inputName" placeholder="Where the expense was made ?"></p>
+    <p>Date:
+    <input type="date" name="dates" id="inputDate" placeholder="Select a date">
+    Amount:
+    <input type="text" name="amounts" id="inputAmount" placeholder="Input an amount"></p>
+    <input id="submit" type="submit" value="Add Expense">
+
+    <table class="tableContainer">
+        <tr class="title">
+            <th class="nameTable">Name</th>
+            <th class="dateTable">Date</th>
+            <th class="amountTable">Amount</th>
+            <th class="removeTable">Remove expense</th>
+        </tr>
+        
+
+
+
+
+    </table>
+
+
+
+
+
+
+
+
+</div>
+    <script src="expense.js"></script>
+</body>
+</html>
