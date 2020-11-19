@@ -39,6 +39,7 @@ txtArea.textContent = ""
 
 // create a function to open the modal with the select text
 function openModal(e){
+    console.log(e.currentTarget)
 const eventText = e.currentTarget.previousElementSibling.textContent
 const modalText = document.querySelector('.p-modal')
 modalText.textContent = ""

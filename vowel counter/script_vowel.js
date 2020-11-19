@@ -7,36 +7,19 @@ button.addEventListener('click', counter)
 
 function counter () {
     const text = document.querySelector('input').value
-    
-    const vowels = [
-        text.match(/a/g),
-        text.match(/e/g),
-        text.match(/i/g),
-        text.match(/o/g),
-        text.match(/u/g)
-    ]
-    // console.log(vowels[0].length)
-    // console.log(vowels[1].length)
-    
+    const arrayText = [...text]
 
-    function nonNull(array) {
-        var result = [];
-        for (var i = 0; i < array.length; i++) {
-          var value = array[i];
-          if (value !== null) result.push(value);
-        }
-        return result;
-      }
+    const vowels = ["a", "e", "i" ,"o", "u"]
+    const counter = arrayText.reduce((acc,vowel) => {
+        if (vowels.includes(vowel)) {
+            return acc+1
+        } return acc
 
-      console.log(nonNull(vowels))
+    },0)
 
-    
+    window.alert(`Esta frase possui ${counter} vogais !`)
 
     }
-
-
-
-
 
 
 
