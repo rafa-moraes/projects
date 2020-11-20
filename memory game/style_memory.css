@@ -1,0 +1,44 @@
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3 , 250px);
+    justify-content: left;
+    
+}
+img{
+    background: midnightblue;
+}
+.show{
+    display: block;
+
+
+}
+.hide{
+    opacity: 0 ;
+    background-color: midnightblue;
+
+}
+.images_div {
+    background: midnightblue;
+    border: 3px solid white;
+    height: 250px;
+    width: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
