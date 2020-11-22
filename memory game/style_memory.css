@@ -8,12 +8,12 @@
 img{
     background: midnightblue;
 }
-.show{
+img[class*= 'show']{
     display: block;
 
 
 }
-.hide{
+img[class*= 'hide']{
     opacity: 0 ;
     background-color: midnightblue;
 
