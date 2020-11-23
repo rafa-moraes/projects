@@ -4,12 +4,8 @@ image.forEach(e => e.addEventListener('click', flipCards,{capture: false}));
 
 let matches = []
 
-
-
 function flipCards (e) {
     
-    console.log(e.currentTarget)
-    console.log(e.target)
     const id = e.target.id   
     e.target.className = `${id}_show`
     
@@ -30,10 +26,9 @@ function checkIfMatch() {
         const score = document.querySelector('#score')
         const count = matches.length/2
         score.textContent = `Score: ${count}`
-        window.alert(`Congratz you have ${count} score`)
+        setTimeout(() => window.alert(`Congratz you have ${count} score`),500)
         
-        
-        
+                
     } else {
         // window.alert("Errado")
         const failed = document.querySelector('#failed')
@@ -42,13 +37,14 @@ function checkIfMatch() {
         let lastArray = matches[(matches.length-1)]
         
         let esconder = document.querySelector(`.${lastArray}`)
-        esconder.className = "hide"
+        setTimeout(() => esconder.className = "hide",500)
         matches.pop()
         
         lastArray = matches[(matches.length-1)]
-        esconder = document.querySelector(`.${lastArray}`)
-        esconder.className = "hide"
+        esconder2 = document.querySelector(`.${lastArray}`)
+        setTimeout(() => esconder2.className = "hide",500)
         matches.pop()
+        setTimeout(() => window.alert(`Sorry, try again!`),700)
         
     }
     
