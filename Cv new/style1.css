@@ -52,7 +52,7 @@ body{
 }
 
 .container2{
-    background: #e5a20d ;
+    background: rgb(255, 255, 0) ;
     /* border: 2px solid rgb(170, 24, 24); */
     background-image: url(images/ali-yahya-OQwjN32hAqw-unsplash.jpg);
     background-size: 100%;
@@ -90,6 +90,21 @@ body{
     margin-top: 25px;
 }
 
+
+
+#title {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.paragraph {
+    text-align: justify;
+    font-size: 25px;
+    margin: 50px 100px;
+}
+
+                    /* Contact Me area  */
 .container3 img{ 
     height: 50vh;
     width: 50vw;
@@ -111,23 +126,33 @@ body{
     color: #fff;
     bottom: 0;
     height: 50vh;
+    width: 50vw;
 
 }
 
-#title {
-    padding-top: 50px;
-    text-align: center;
-    font-size: 35px;
+.form {
+    display: flex;
+    flex-direction: column;
 }
 
-.paragraph {
-    text-align: justify;
-    font-size: 25px;
-    margin: 50px 100px;
+.form h2{
+    margin-left: 20px;
+    font-size: 20px;
+    margin-top:15px;
+    margin-bottom: 5px;
 }
-
-
-
-
-
+.form input {
+    width: 300px;
+    margin-left: 20px;
+    margin-top:15px;
+}
+.form textarea {
+    width: 300px;
+    margin-left: 20px;
+    margin-top:15px;
+}
+.social-content{
+    display: flex;
+    justify-content: space-between;
+}
 
