@@ -50,6 +50,26 @@ function closeIf (e) {
 
 
 
+// Pendente
+
+// Criar botao de submit de mensagem
+// pegar as informacoes de nome, email e mensagem e me enviar um email
+
+// Ajustar o modal com os dados das experiencias
+// ajustar os botoes read me para melhorar o layout
+// inserir o href nos a das midias sociais
+// ajustar o site para mobile version (se possivel)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
