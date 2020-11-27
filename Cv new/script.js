@@ -19,7 +19,9 @@ function openModal(e) {
     modal.style.display = "block"
 
 
-    document.body.style.background = 'rgba(128, 128, 128, 0.9)'
+    document.body.style.background = 'white'
+    // body.style.background = '#1E5155'
+    
     e.stopPropagation()
     window.addEventListener('click',closeIf)
 
