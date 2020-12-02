@@ -24,16 +24,20 @@ table{
 tr {
     border: 1px solid black;
     height: 40px;
+    max-height: 40px;
     width: 630px;
     text-align: left;
+    padding: 0;
 }
 
 th{
     font-size: 25px;
     border: 1px solid gray;
     height: 40px;
+    max-height: 40px;
     width: 630px;
     text-align: left;
+    padding: 0;
     padding-left: 10px;
 }
 td {
@@ -42,6 +46,7 @@ td {
     height: 40px;
     width: 630px;
     text-align: left;
+    padding: 0;
     padding-left: 15px;
     color: rgb(35, 194, 96);
 
