@@ -23,7 +23,8 @@ console.log(people.reduce(countNames, {}))
 
 function countNames (acc , item) {
     console.log(`Looping ${item.names}`)
-    acc[item.names] = acc[item.names] + 1 || 1 
+    acc[item.names] ? acc[item.names] = acc[item.names] + 1 : acc[item.names] = 1 
+    // acc[item.names] = acc[item.names] + 1 || 1 
     return acc
 
    
