@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right , red,orange,yellow,green,blue,indigo,violet);
+    height: 100vh;
+  
+}
+
+
+.clock_face {
+    border: 20px solid white;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+
+}
+
+.hand {
+    position: absolute;
+    top: 50%;
+    height: 6px;
+    width: 140px;
+    background-color: black;
+    transform: translate(-50%, );
+    
+}
+.hour {
+    width: 38%;
+    /* transform: rotate(90deg); */
+    transform-origin: 100%;
+    left: 13%;
+}
+
+.min{
+    width: 45%%;
+    /* transform: rotate(90deg); */
+    transform-origin: 100%;
+    left: 5%;
+}
+
+.second {
+    width: 50%;
+    /* transform: rotate(90deg); */
+    transform-origin: 100%;
+    background-color: darkred;
+}
+
+.hoursNumber{
+    font-size: 37px;
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 1px 1px #ffee00 ;
+}
+
+#one {
+    left: 81%;
+    top: -13%;
+    
+}
+#two{
+    left: 103%;
+    top: 9%;
+}
+
+#three {
+    left: 110%;
+    top: 44%;
+}
+#four {
+    left: 104%;
+    top: 78%;
+}
+#five {
+    left: 80%;
+    top: 99%;
+}
+#six {
+    left: 46%;
+    top: 106%;
+}
+#seven {
+    left: 9%;
+    top: 98%;
+}
+#eight {
+    left: -12%;
+    top: 74%;
+}
+#nine {
+    left: -18%;
+    top: 44%;
+}
+
+#ten {
+    left: -15%;
+    top: 7%;
+    
+}
+#eleven{
+    left: 8%;
+    top: -15%;
+}
+
+#twelve {
+    
+    left: 43%;
+    top: -21%;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
