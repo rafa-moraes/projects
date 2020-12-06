@@ -38,7 +38,7 @@ body{
 }
 
 .min{
-    width: 45%%;
+    width: 45%;
     /* transform: rotate(90deg); */
     transform-origin: 100%;
     left: 5%;
@@ -49,6 +49,7 @@ body{
     /* transform: rotate(90deg); */
     transform-origin: 100%;
     background-color: darkred;
+    left: 0.5%;
 }
 
 .hoursNumber{
