@@ -1,0 +1,33 @@
+:root{
+    --spacing: 10px;
+    --blur: 10px ;
+    --base: #ffc600;  
+}
+
+body {
+    font-family:  Helvetica, sans-serif;
+    margin-left: 20px;
+    background-color: #193549;
+    color: white;
+}
+h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+img {
+    margin-top: 50px;
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+}
+
+label{
+font-size: 20px;
+
+    
+}
+
+.js {
+    color: var(--base);
+}
