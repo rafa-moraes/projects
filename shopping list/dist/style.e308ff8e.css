@@ -1,0 +1,62 @@
+body {
+    background: #193549;;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.shopping-list {
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.shopping {
+    height: 100px;
+    width: 350px;
+    background-color: #ffc600;
+    border-radius: 10px;
+}
+
+input {
+
+    margin-top: 30px ;
+    margin-left: 15px;
+    height: 25px;
+    border-radius: 5px;
+    
+}
+
+button {
+    
+    height: 31px;
+    border-radius: 5px;
+    background-color: darkmagenta;
+    color: white;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

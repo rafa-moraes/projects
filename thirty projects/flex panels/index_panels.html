@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex Panels</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC" type="text/css">
+</head>
+<body>
+    <div class="panels">
+        <div class="panel panel1"> 
+        <p>ALWAYS</p>
+        <p>EAT</p>
+        <p>HEALTHY</p>    
+        </div>
+        <div class="panel panel2"> 
+        <p>ALWAYS</p>
+        <p>LOVE</p>
+        <p>YOURSELF</p>     
+        </div>
+        <div class="panel panel3"> 
+        <p>ALWAYS</p>
+        <p>TRAVEL</p>
+        <p>AWAY</p>     
+        </div>
+        <div class="panel panel4"> 
+        <p>ALWAYS</p>
+        <p>EXPLORE</p>
+        <p>PLACES</p>    
+        </div>
+        <div class="panel panel5"> 
+        <p style="color: red">ALWAYS</p>
+        <p>PLAY</p>
+        <p style="color: red">HARD</p>     
+        </div>
+
+    </div>
+
+    <script>
+
+    const panel = document.querySelectorAll('.panel')
+    panel.forEach(panel => panel.addEventListener('click', openPanels))
+    
+    function openPanels () {
+
+        this.classList.toggle('open')
+
+    }
+
+// 
+
+
+
+    </script>
+</body>
+</html>

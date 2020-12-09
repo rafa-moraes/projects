@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.panels{
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.panel1 {
+    background-image: url(images/pexels-hồng-xuân-viên-2869318.jpg);
+    background-size: cover;
+}
+
+.panel2 {
+    background-image: url(images/pexels-la-miko-3671235.jpg);
+    background-size: cover;
+}
+.panel3 {
+    background-image: url(images/pexels-michael-block-3225529.jpg);
+    background-size: cover;
+}
+.panel4 {
+    background-image: url(images/pexels-pixabay-68767.jpg);
+    background-size: cover;
+}
+.panel5 {
+    background-image: url(images/pexels-syed-hasan-mehdi-839428.jpg);
+    background-size: cover;
+}
+
+.panel {
+    flex: 1;
+    place-items: center;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    color: white;
+    transition: all 0.5s;
+}
+
+
+.panel *{
+    
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.panel p {
+    font-size: 2em;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 600;
+}
+
+.panel >*:first-child {
+    transform: translateY(-100%);
+}
+.panel >*:last-child {
+    transform: translateY(100%);
+}
+
+.panel p:nth-child(2){
+    font-size: 4em;
+}
+
+.open {
+    flex: 5;
+
+
+
+}
+
+.open *:first-child {
+    transform: translateY(0);
+    color: black;
+}
+.open *:last-child {
+    transform: translateY(0);
+    color: black;
+}
+
+
+
