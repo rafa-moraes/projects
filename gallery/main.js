@@ -1,41 +1,83 @@
 // Get the items
-const gallery = document.querySelectorAll('.gallery img')
-gallery.forEach(image => image.addEventListener('click', openModal))
+const gallery = Gallery(document.querySelector('.gallery'))
 
-function openModal (e) {
+
+function Gallery (pictures) {
+    const images = pictures.querySelectorAll('.images')
+    const modal = pictures.querySelector('.modal')
+    images.forEach(image => image.addEventListener('click', openModal))
+    let current
+    let prev
+    let next
+    const imgModal = pictures.querySelector('#img_modal')
+    const modalName = pictures.querySelector('.product_name')
+    const modalDescription = pictures.querySelector('.product_description')
+    const leftArrow = pictures.querySelector('#arrowLeftSpan')
+    const rightArrow = pictures.querySelector('#arrowRightSpan')
+
+    function openModal (e) {
+        
+        
+      
+
+        leftArrow.addEventListener('click', direction)
+        rightArrow.addEventListener('click', () => direction('next'))
+        window.addEventListener('keyup',closeModal)
+        // window.addEventListener('click',closeModal)
+        
+        
+        imgModal.src = e.target.src
+        modalName.textContent = e.target.name
+        modalDescription.textContent = e.target.dataset.description
+        modal.style.opacity = '1'
+        modal.style.pointerEvents = 'all';
+        
+        
     
-    const imgModal = document.querySelector('#img_modal')
-    const modalName = document.querySelector('.product_name')
-    const modalDescription = document.querySelector('.product_description')
-    const leftArrow = document.querySelector('#arrowLeftSpan')
-    const rightArrow = document.querySelector('#arrowRightSpan')
-    leftArrow.addEventListener('click', prevPicture)
-    rightArrow.addEventListener('click', event => console.log(event) )
-    imgModal.src = e.currentTarget.src
-    modalName.textContent = e.currentTarget.name
-    modalDescription.textContent = e.currentTarget.dataset.description
-    const modal = document.querySelector('.modal')
-    modal.style.opacity = '1'
-    modal.style.pointerEvents = 'all';
-    console.log(e.target.parentElement.nextElementSibling)
-
+    }
     
-    function prevPicture () {
-        console.log('left')
-    }
-    function nextPicture (e) {
-  
-    }
+    function direction (direction){
+        if (direction === 'next'){
+            imgModal.src = next.src
+            console.log('direita')
+        }else {
+            console.log('esquerda')
+            imgModal.src = prev.src 
+        }
 
+    }    
+
+
+     
     function closeModal (e) {
-        // if(!modal){
-            console.log('functiona')
-        // } return
+        if(e.keyCode === 27 || e.currentTarget ==! modal){
+        console.log(e.target)
+        modal.style.opacity = '0'
+        modal.style.pointerEvents = 'none';
     }
+    }
+
+
+    function applyClasses () {
+
+
+
+    }
+
+
+
+
+
+
+
+
 
 
 
 }
+
+
+
 
 
 // close modal
