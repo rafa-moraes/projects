@@ -16,15 +16,16 @@ function Gallery (pictures) {
     const rightArrow = pictures.querySelector('#arrowRightSpan')
 
     function openModal (e) {
-        
-        
-      
+        current = e.target.parentElement
+        prev = current.previousElementSibling || images[0].lastElementChild
+        next = current.nextElementSibling || images[0].firstElementChild
 
+        console.dir(images[0].lastElementChild)
+        e.stopPropagation()
         leftArrow.addEventListener('click', direction)
         rightArrow.addEventListener('click', () => direction('next'))
-        window.addEventListener('keyup',closeModal)
-        // window.addEventListener('click',closeModal)
-        
+        window.addEventListener('keyup',handleModal)
+        window.addEventListener('click',handleModal)
         
         imgModal.src = e.target.src
         modalName.textContent = e.target.name
@@ -33,48 +34,52 @@ function Gallery (pictures) {
         modal.style.pointerEvents = 'all';
         
         
-    
+        
     }
     
     function direction (direction){
         if (direction === 'next'){
-            imgModal.src = next.src
-            console.log('direita')
+            console.log('teste')
+            imgModal.src = next.childNodes[1].currentSrc
+            modalName.textContent = next.childNodes[1].attributes[4].textContent
+            modalDescription.textContent = next.childNodes[1].attributes[5].textContent
+            prev = current
+            current = next
+            next = next.nextElementSibling || images[0].firstElementChild
+            
         }else {
             console.log('esquerda')
-            imgModal.src = prev.src 
+            imgModal.src = prev.childNodes[1].currentSrc
+            modalName.textContent = prev.childNodes[1].attributes[4].textContent
+            modalDescription.textContent = prev.childNodes[1].attributes[5].textContent
+            next = current
+            current = prev
+            prev = prev.previousElementSibling || images[0].lastElementChild
+            
         }
 
     }    
 
 
      
-    function closeModal (e) {
-        if(e.keyCode === 27 || e.currentTarget ==! modal){
-        console.log(e.target)
-        modal.style.opacity = '0'
-        modal.style.pointerEvents = 'none';
+    function handleModal (e) {
+        if(e.keyCode === 27){
+            modal.style.opacity = '0'
+            modal.style.pointerEvents = 'none';
+        }if(e.keyCode === 39){
+            return direction('next')
+        }if(e.keyCode === 37){
+            return direction()
+        }
+            
+       
     }
     }
 
 
-    function applyClasses () {
 
 
 
-    }
-
-
-
-
-
-
-
-
-
-
-
-}
 
 
 
