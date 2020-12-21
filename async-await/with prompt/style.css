@@ -1,0 +1,101 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #184A45FF;
+}
+.wrapper {
+    background: #FC766AFF;
+    height: 200px;
+    width: 500px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button {
+    margin: 0 15px;
+    height: 50px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background: #184A45FF;
+    color: white;
+    
+}
+
+.popup {
+    background: hsla(0,0%,30%,0.5);
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: var(--opacity);
+    --opacity: 0;
+    transition: all 0.25s;
+}
+
+.popup fieldset{ 
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border: 3px solid white;
+    border-radius: 5px;
+    transition: all 0.2s;
+    --scale: 0.3;
+    transform: scale(var(--scale));
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.popup.open {
+--opacity: 1;
+pointer-events: all;
+
+}
+
+.popup.open fieldset{
+--scale:1;
+
+}
+
+fieldset input {
+    height: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+
+}
+
+.fildButtons {
+    display: flex;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
