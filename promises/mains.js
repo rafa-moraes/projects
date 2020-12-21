@@ -1,3 +1,6 @@
+
+const wait = (ms=0) => new Promise(resolve => setTimeout(resolve, ms))
+
 function makeAPizza (toppings = []) {
 
     return new Promise (function (resolve, reject){
@@ -68,4 +71,8 @@ makeAPizza(['pepperoni'])
     const dinner2 = Promise.allSettled([pizza1, pizza2, pizza3])
     .then(results => console.log(results))
 
-
+    async function pizzaWithAwait () {
+        const pizzaAwait1 = await makeAPizza(['rafael'])
+        console.log(pizzaAwait1)
+    }
+    pizzaWithAwait()
