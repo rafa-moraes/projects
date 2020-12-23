@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apis</title>
+</head>
+<body>
+    <p style="font-size: 20px;" class="users"></p>
+
+
+
+    <script>
+    function wait (ms = 0) {
+        return new Promise (resolve => setTimeout(resolve,ms))
+    }
+    function handleError (err) {
+            console.log('Check this error')
+            console.log(err)
+            userEl.textContent = `Something went wrong ${err}`
+    }
+    
+    const baseEndPoint = 'https://api.github.com'
+    const userEndPoint = `${baseEndPoint}/users`
+    const userEl = document.querySelector('.users')
+    
+    
+    async function displayUser (username) {
+    userEl.textContent = 'Loanding...'
+    await wait (1000)
+    const userData = await fetch(`${userEndPoint}/${username}`)
+    const data = await userData.json()
+    userEl.textContent = `${data.name} - ${data.blog} `
+
+    }
+    displayUser('wesbos').catch(handleError)
+
+
+
+
+    // .then(data => data.json())
+    // .then(data => console.log(data))
+    // .catch(handleError)
+
+
+    </script>
+    
+</body>
+</html>
