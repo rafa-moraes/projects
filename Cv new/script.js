@@ -12,19 +12,19 @@ btnX.addEventListener('click', closeModal)
 function openModal(e) {
     const dModal = document.querySelector('.divModal')
     const modal = document.querySelector('.modal')
+    const innerModal = document.querySelector('.innerModal')
     if(this.className === 'read-projects'){
        dModal.innerHTML = `       `     
     }
     
     modal.style.display = "block"
-
-
-    document.body.style.background = 'white'
+    innerModal.style.display = 'block'
+    document.body.style.background = 'background: hsla(0,0%,30%,0.5);'
     // body.style.background = '#1E5155'
     
     e.stopPropagation()
     window.addEventListener('click',closeIf)
-
+    window.addEventListener('keyup',closeIf)
 }
 
 
@@ -39,13 +39,36 @@ function closeModal() {
 function closeIf (e) {
     console.log(e.target)
     const modal = document.querySelector('.modal')
+    const innerModal = document.querySelector('.innerModal')
     const dModal = document.querySelector('.divModal')
-    if (e.target !== modal && e.target !== dModal) {
+    if (e.target !== innerModal && e.target !== dModal || e.keyCode === 27) {
         modal.style.display = "none" 
         document.body.style.background = ''  
+        console.log(e)
     }
+
 }
 
+// display text
+
+function wait (ms = 0){
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+
+const textWhoAmI = document.querySelector('[data-type]')
+let eachLetter = textWhoAmI.textContent
+let index = 1
+
+async function draw () {
+    textWhoAmI.textContent = eachLetter.slice(0,index)
+    index++
+    
+    if(index <= eachLetter.length){
+    await wait(5)
+    draw()
+    }
+}
+console.log(draw())
 
 
 
