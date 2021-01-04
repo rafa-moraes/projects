@@ -33,13 +33,12 @@ function Gallery (pictures) {
         modal.style.opacity = '1'
         modal.style.pointerEvents = 'all';
         
-        
+        window.addEventListener('click', closeIf)
         
     }
     
     function direction (direction){
         if (direction === 'next'){
-            console.log('teste')
             imgModal.src = next.childNodes[1].currentSrc
             modalName.textContent = next.childNodes[1].attributes[4].textContent
             modalDescription.textContent = next.childNodes[1].attributes[5].textContent
@@ -48,7 +47,6 @@ function Gallery (pictures) {
             next = next.nextElementSibling || images[0].firstElementChild
             
         }else {
-            console.log('esquerda')
             imgModal.src = prev.childNodes[1].currentSrc
             modalName.textContent = prev.childNodes[1].attributes[4].textContent
             modalDescription.textContent = prev.childNodes[1].attributes[5].textContent
@@ -59,7 +57,6 @@ function Gallery (pictures) {
         }
 
     }    
-
 
      
     function handleModal (e) {
@@ -74,40 +71,13 @@ function Gallery (pictures) {
             
        
     }
+    function closeIf(e) {
+        if(!(e.target.classList.contains('innerModal'))){
+        modal.style.opacity = '0'
+        modal.style.pointerEvents = 'none';
+        }
     }
-
-
-
-
-
-
-
-
-
-
-// close modal
-
-// move forward and backwards with an arrow
-
-// make sure people can use escape and arrows to move the pictures
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
 
 
