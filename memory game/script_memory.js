@@ -52,13 +52,6 @@ function checkIfMatch() {
 
 
 
-// quero seis cartas viradas pra baixo e ao clicar revelar a foto - OK
-// apos revelar 2 cartas ele verificar se as cartas sao iguais - ok
-// se forem iguais confirmar e somar um ponto - Somar OK, confirmar tem q arrumar
-// se forem diferentes recusar, somar uma tentativa e voltar as cartas ao normal.
-
-
-
 // Comando adicionar uma imagem
 // const img = document.createElement('img')
 //     img.src = "images/cat.jpg"
