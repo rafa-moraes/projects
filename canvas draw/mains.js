@@ -1,5 +1,5 @@
 const range = document.querySelector('#rangeInput')
-let lineCanvas = 10
+let lineCanvas = 30
 let isRange = false
 range.addEventListener('mousedown', ()=> isRange = true )
 range.addEventListener('mouseup', ()=> isRange = false )
