@@ -10,11 +10,24 @@
             padding: 0;
             box-sizing: border-box;
         }
+        label{
+            margin-left: 15px;
+            top: 15px;
+            font-size: 20px;
+        }
+        .wrapper {
+            position: fixed;
+        }
+
     </style>
 </head>
 <body>
-    
-    <canvas class="canvas"></canvas>
+    <div class="wrapper">
+        <label for="">Select the width of the line</label>
+        <input type="range" min = "10" max="50" value = "10" name="" id="rangeInput">
+    </div>
+    <canvas class="canvas">
+    </canvas>
 
 <script src="mains.js"></script>
 
