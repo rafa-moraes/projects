@@ -2,7 +2,9 @@ const fromSelect = document.querySelector('[name="from_currency"]')
 const toSelect = document.querySelector('[name="to_currency"]')
 const endPoint = 'https://api.exchangeratesapi.io/latest'
 const ratesByBase ={}
-
+const form = document.querySelector('form')
+const valueToConvert = document.querySelector('[name="valueToConvert"]')
+const totalConverted = document.querySelector('.total')
 const currencies = {
     AUD:'Australian Dollar',
     BGN:'Bulgarian Lev',
@@ -68,10 +70,22 @@ const rate = ratesByBase[from].rates[to]
 const convertedAmount = rate * amount
 console.log(convertedAmount)
 return convertedAmount
-
-
 }
 
+function formatCurrency(amount, currency){
+    return Intl.NumberFormat('en-US',{
+        style: 'currency',
+        currency,
+    }).format(amount)
+}
+
+async function handleInput (e) {
+const amountConverted = await convert(valueToConvert.value ,fromSelect.value,toSelect.value)
+totalConverted.textContent = formatCurrency(amountConverted,toSelect.value)
+}
+
+// This way of event works because they bubble up and pass the form
+form.addEventListener('input', handleInput)
 
 
 
