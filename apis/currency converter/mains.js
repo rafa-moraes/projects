@@ -1,4 +1,4 @@
-import {currencies} from './currencies.js'
+import currencies from './currencies.js'
 
 const fromSelect = document.querySelector('[name="from_currency"]')
 const toSelect = document.querySelector('[name="to_currency"]')

@@ -1,4 +1,4 @@
-export const currencies = {
+const currencies = {
     AUD:'Australian Dollar',
     BGN:'Bulgarian Lev',
     BRL:'Brazilian Real',
@@ -33,3 +33,11 @@ export const currencies = {
     ZAR:'South African Rand',
 
 }
+
+export default currencies
+
+
+
+
+
+
