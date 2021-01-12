@@ -5,7 +5,7 @@ import {convert} from './lib.js'
 export const fromSelect = document.querySelector('[name="from_currency"]')
 export const toSelect = document.querySelector('[name="to_currency"]')
 export const valueToConvert = document.querySelector('[name="valueToConvert"]')
-export const totalConverted = document.querySelector('.total')
+export const totalConverted = document.querySelector('.total>span')
 const form = document.querySelector('form')
 
 
