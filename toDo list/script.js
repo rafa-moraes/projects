@@ -21,7 +21,6 @@ function executeTask() {
     
 }
 
-
 function clearTask(){
 
     let ulist = document.querySelector('#unorderedList')
@@ -36,16 +35,12 @@ function clearTask(){
 }
 
 function removebtn () {
-
     this.parentElement.remove()
-
 }
 
 function donebtn () {
-
     this.parentElement.style.textDecoration = "line-through"
     
-
 }
 
 
