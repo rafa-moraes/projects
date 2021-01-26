@@ -1,0 +1,40 @@
+body{
+    background: rgb(17, 19, 29);
+}
+
+.inbox{
+    border: 1px gray solid;
+    width: 300px;
+    position: relative;
+    left: 50%;
+    top: 200px;
+    transform: translateX(-50%);
+    background: rgb(97, 182, 240);
+
+}
+
+.item {
+    display: flex;
+    border: 1px gray solid;
+}
+
+p{
+    margin: 0;
+    padding: 18px;
+    width: 250px;
+    border-left: 2px gray solid;
+    font-size: 20px;
+}
+input{
+    height: 65px;
+    margin: 0 20px;
+
+
+}
+
+input:checked + p {
+    text-decoration: line-through;
+}
+
+
+
