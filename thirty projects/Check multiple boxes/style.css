@@ -7,10 +7,15 @@ body{
     width: 300px;
     position: relative;
     left: 50%;
-    top: 200px;
+    top: 50px;
     transform: translateX(-50%);
     background: rgb(97, 182, 240);
 
+}
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 80px;
 }
 
 .item {
