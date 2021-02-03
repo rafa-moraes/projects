@@ -21,38 +21,45 @@ const data = [
     'yulkwnlxpidsjfkzlgn'
 ]
 
-// console.log('u'<'j')
-
 const data1 = 'jiwfkujhamlolnu'
 
 const dataArray = [...data1]
+// const text = 'fk'
+// console.log(text[text.length-1] < 'u')
 let dataResult = []
-dataArray.map((vowel,array) => {
-    if (vowel < dataArray[array+1]){
-        dataResult.push(vowel)
-        
-    }else if(vowel > dataArray[array+1] && vowel > dataArray[array-1]){
-        dataResult.push(vowel)
-    }
-        
-    console.log(dataResult)
 
-})
-let newData = []
-dataResult.map((vowel,array) => {
-    if (dataResult[array-1]>vowel ){
-        newData.push(array)
+dataArray.map((vowel,array) => {
+    if (vowel<dataArray[array-1]) {
+        dataResult = []
+        console.log(vowel, array)
+ 
         
-    }else if (vowel > dataResult[array+1]) {
-        newData.push(array)
-    }
-console.log(newData)
-})
+    console.log(dataArray)
+
+}})
+
+
+
+
+
+
+// let newData = []
+// dataResult.map((vowel,array) => {
+//     if (vowel>dataResult[array+1]){
+//         dataResult.
+
+//     }
+// console.log(dataResult)
+// })
+
+// "j", "i", "w", "f", "k", "u", "j", "h", "a", "m", "l", "o", "l", "n", "u"
+
+// 10 9 23 6 11 21 10 8 1 13 12 15 12 14 21
 
 // "i", "w", "f", "k", "u", "a", "m", "l", "o", "l", "n"
 
 // 9 23 6 11 21 1 13 12 15 12 14
-
+// vowel < dataArray[array+1] || vowel > dataArray[array+1] && vowel > dataArray[array-1] 
 
 
 
