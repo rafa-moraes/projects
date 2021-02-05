@@ -27,18 +27,29 @@ const dataArray = [...data1]
 // const text = 'fk'
 // console.log(text[text.length-1] < 'u')
 let dataResult = []
+let dataResult2 = []
 
 dataArray.map((vowel,array) => {
-    if (vowel<dataArray[array-1]) {
-        dataResult = []
-        console.log(vowel, array)
- 
+    if (vowel>dataArray[array+1]) {
+        dataResult.push(array)
         
-    console.log(dataArray)
+        // console.log(dataResult)
+    
 
 }})
+console.log(dataResult)
+console.log(dataArray.slice(3,6))
 
-
+let i = 0
+function show () {
+    if(i<dataResult.length){
+        console.log(i)
+        console.log(dataResult.length)
+        console.log(dataResult[i+1]-dataResult[i])
+        i++
+        
+    }
+}
 
 
 
