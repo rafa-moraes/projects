@@ -21,7 +21,7 @@ const data = [
     'yulkwnlxpidsjfkzlgn'
 ]
 
-const data1 = 'jiwfkujhamlolnu'
+const data1 = 'cntvjtrds'
 
 const dataArray = [...data1]
 // const text = 'fk'
@@ -34,31 +34,29 @@ dataArray.map((vowel,array) => {
         dataResult.push(array)
         
         // console.log(dataResult)
+        
+    }})
     
-
-}})
-
-console.log(dataResult)
-// console.log(dataArray.slice(3,6))
-
-let i = 0
-function show () {
-    if(i<dataResult.length){
-    console.log(i)
-    console.log(dataResult[i]+1,dataResult[i]+1)
-    console.log(dataArray.slice(dataResult[0]+1,dataResult[1]+1).join(""))
-    console.log(dataArray.slice(dataResult[1]+1,dataResult[2]+1).join(""))
-    console.log(dataArray.slice(dataResult[2]+1,dataResult[3]+1).join(""))
-    console.log(dataArray.slice(dataResult[3]+1,dataResult[4]+1).join(""))
-    console.log(dataArray.slice(dataResult[4]+1,dataResult[5]+1).join(""))
-    console.log(dataArray.slice(dataResult[5]+1,dataResult[6]+1).join(""))
-}else{
-    console.log('erro')
-}
-i++
+    console.log(dataResult)
+    // console.log(dataArray.slice(3,6))
+    
+    function show () {
+        let i = 0
+        while (i<dataResult.length) {
+            dataResult2.push(dataArray.slice(dataResult[i]+1,dataResult[i+1]+1).join(""))
+            console.log(dataResult2[i].length)
+            i++
+        }
+        dataResult2.sort((a,b) => b.length - a.length)
+        // console.log(dataResult2)
+        // while (i<dataResult2.length) {
+        //     console.log(dataResult2[i].length)
+        // }
+        console.log(dataResult2[0])
+        
     }
-
     show()
+    
 
 
 // A ideia eh conseguir fazer um slice do primeiro e segundo item do array e dar join neles, e ai dps contar quantos caracteres tem o array e ver qual eh o maior e mostrar.
