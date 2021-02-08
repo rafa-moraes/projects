@@ -21,12 +21,12 @@ const data = [
     'yulkwnlxpidsjfkzlgn'
 ]
 
-const data1 = 'cntvjtrds'
+const data1 = 'hmqxcadevjhpues'
 
 const dataArray = [...data1]
 // const text = 'fk'
 // console.log(text[text.length-1] < 'u')
-let dataResult = []
+let dataResult = [0]
 let dataResult2 = []
 
 dataArray.map((vowel,array) => {
@@ -43,8 +43,12 @@ dataArray.map((vowel,array) => {
     function show () {
         let i = 0
         while (i<dataResult.length) {
+            if(dataResult[0]===dataResult[1]){
             dataResult2.push(dataArray.slice(dataResult[i]+1,dataResult[i+1]+1).join(""))
-            console.log(dataResult2[i].length)
+        }else{
+            dataResult2.push(dataArray.slice(dataResult[i],dataResult[i+1]+1).join(""))
+        }
+            
             i++
         }
         dataResult2.sort((a,b) => b.length - a.length)
@@ -62,7 +66,8 @@ dataArray.map((vowel,array) => {
 // A ideia eh conseguir fazer um slice do primeiro e segundo item do array e dar join neles, e ai dps contar quantos caracteres tem o array e ver qual eh o maior e mostrar.
 
 
-
+// cntvjtrds
+// 3 14 20 22 10 20 18 4 19
 
 
 // let newData = []
@@ -73,6 +78,10 @@ dataArray.map((vowel,array) => {
 //     }
 // console.log(dataResult)
 // })
+
+
+
+
 
 // "j", "i", "w", "f", "k", "u", "j", "h", "a", "m", "l", "o", "l", "n", "u"
 
