@@ -29,8 +29,39 @@
 // Output:
 // 72
 
-let a = 154
-let b = 242
+// Test: gcdRecur(125, 90)
+// Output:
+// 5
+// Test: gcdRecur(195, 156)
+// Output:
+// 39
+// Test: gcdRecur(288, 96)
+// Output:
+// 96
+// Test: gcdRecur(320, 256)
+// Output:
+// 64
+// Test: gcdRecur(64, 100)
+// Output:
+// 4
+// Test: gcdRecur(234, 180)
+// Output:
+// 18
+// Test: gcdRecur(49, 126)
+// Output:
+// 7
+// Test: gcdRecur(140, 230)
+// Output:
+// 10
+// Test: gcdRecur(35, 14)
+// Output:
+// 7
+// Test: gcdRecur(112, 224)
+// Output:
+// 112
+
+let a = 195
+let b = 156
 let c = a%b
 
 while (c !== 0){
