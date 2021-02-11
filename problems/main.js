@@ -22,9 +22,8 @@ const data = [
     'yulkwnlxpidsjfkzlgn'
 ]
 
-const data1 = 'abcdefghijklmnopqrstuvwxyz'
+const data1 = 'zyxwvutsrqponmlkjihgfedcba'
 // hmqxcadevjhpues
-// abcdefghijklmnopqrstuvwxyz
 // gqwhjqdkltzvazjl
 // zyxwvutsrqponmlkjihgfedcba
 // jlyrwzks
@@ -33,17 +32,12 @@ const data1 = 'abcdefghijklmnopqrstuvwxyz'
 // jmlgywztzwhefalnap
 
 // hmqx
-// abcdefghijklmnopqrstuvwxyz
 // dkltz
 // z
 // jly
 // orss
 // nnw
 // aln
-
-
-
-
 
 
 const dataArray = [...data1]
@@ -60,14 +54,15 @@ dataArray.map((vowel,array) => {
         
     }})
     
-    console.log(dataResult.length)
+    console.log(dataResult)
   
     
     function show () {
-        if(dataResult.lenght === undefined){
+        if(dataResult.length === 1){
             dataResult2 = [...dataArray].join("")
-            console.log(dataResult2)
-        }else {
+            
+            console.log(dataResult2 , dataResult.length)
+        }else { 
         let i = 0
 
         while (i<dataResult.length) {
