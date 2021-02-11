@@ -1,3 +1,4 @@
+
 const data = [
     'jiwfkujhamlolnu',
     'cntvjtrds',
@@ -21,11 +22,33 @@ const data = [
     'yulkwnlxpidsjfkzlgn'
 ]
 
-const data1 = 'hmqxcadevjhpues'
+const data1 = 'abcdefghijklmnopqrstuvwxyz'
+// hmqxcadevjhpues
+// abcdefghijklmnopqrstuvwxyz
+// gqwhjqdkltzvazjl
+// zyxwvutsrqponmlkjihgfedcba
+// jlyrwzks
+// lmxgbvbqoxmxorssajlutzh
+// uvnnwshrb
+// jmlgywztzwhefalnap
+
+// hmqx
+// abcdefghijklmnopqrstuvwxyz
+// dkltz
+// z
+// jly
+// orss
+// nnw
+// aln
+
+
+
+
+
 
 const dataArray = [...data1]
-// const text = 'fk'
-// console.log(text[text.length-1] < 'u')
+console.log(dataArray)
+
 let dataResult = [0]
 let dataResult2 = []
 
@@ -37,32 +60,52 @@ dataArray.map((vowel,array) => {
         
     }})
     
-    console.log(dataResult)
-    // console.log(dataArray.slice(3,6))
+    console.log(dataResult.length)
+  
     
     function show () {
+        if(dataResult.lenght === undefined){
+            dataResult2 = [...dataArray].join("")
+            console.log(dataResult2)
+        }else {
         let i = 0
+
         while (i<dataResult.length) {
             if(dataResult[0]===dataResult[1]){
-            dataResult2.push(dataArray.slice(dataResult[i]+1,dataResult[i+1]+1).join(""))
-        }else{
-            dataResult2.push(dataArray.slice(dataResult[i],dataResult[i+1]+1).join(""))
-        }
-            
-            i++
-        }
-        dataResult2.sort((a,b) => b.length - a.length)
-        // console.log(dataResult2)
-        // while (i<dataResult2.length) {
-        //     console.log(dataResult2[i].length)
-        // }
-        console.log(dataResult2[0])
+             dataResult2.push(dataArray.slice(dataResult[i]+1,dataResult[i+1]+1).join(""))
         
+            }else if(dataArray[dataResult[i]]<dataArray[dataResult[i+1]]){
+                dataResult2.push(dataArray.slice(dataResult[i],dataResult[i+1]+1).join(""))
+
+            }else{dataResult2.push(dataArray.slice(dataResult[i]+1,dataResult[i+1]+1).join(""))
+            }
+        
+        
+        i++
+        }
+        // }
+    //     // 
+
+    //     //     dataResult2.push(dataArray.slice(dataResult[i],dataResult[i+1]+1).join(""))
+
+        // }
+    //     // 
+    //     //     dataResult2.push(dataArray.slice(dataResult[i]+1,dataResult[i+1]+1).join(""))
+    //     // }
+
+    
+        dataResult2.sort((a,b) => b.length - a.length)
+        console.log(dataResult2[0])
+        }
+        
+            
+        // }
     }
+    
     show()
     
 
-
+    // if(dataArray[0]<dataArray[1])
 // A ideia eh conseguir fazer um slice do primeiro e segundo item do array e dar join neles, e ai dps contar quantos caracteres tem o array e ver qual eh o maior e mostrar.
 
 
