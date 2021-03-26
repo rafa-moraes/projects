@@ -11,9 +11,7 @@ function playSound (e) {
         audioKey.play()
         key.classList.add('playing')
         key.addEventListener('transitionend',removeClass)
-
         function removeClass(e) {
-            
         key.className = 'key'
 
         }
