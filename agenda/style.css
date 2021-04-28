@@ -3,11 +3,14 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 25% 25% 25% 25%  ;
+    background-color: burlywood;
 }
 
-
-
-
+header {
+    background-color: blue;
+    height: 400px;
+    
+}
 
 
 
