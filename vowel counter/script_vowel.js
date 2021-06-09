@@ -17,7 +17,7 @@ function counter () {
 
     },0)
 
-    window.alert(`Esta frase possui ${counter} vogais !`)
+    window.alert(`This text contains ${counter} vowels !`)
 
     }
 
